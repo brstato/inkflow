@@ -9,7 +9,9 @@ def run_uvicorn() -> None:
 server = Server()
 
 
-server.watch("main.py", run_uvicorn)
-server.watch("main.py", run_uvicorn)
+server.watch("app/views/")
+
+
+server.serve(host="127.0.0.1", port=53000, root=".")
 
 
