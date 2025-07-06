@@ -1,0 +1,8 @@
+/* static/css/style.css */
+
+.slide img {
+    /*width: 100%;             /* Faz a imagem ocupar toda a largura do contêiner */
+    height: 250px;           /* Defina aqui a altura fixa que você deseja! */
+    object-fit: cover;       /* A mágica acontece aqui! */
+    vertical-align: middle;  /* Bom para alinhamento geral */
+}

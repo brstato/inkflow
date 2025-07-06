@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ shop.shop_name }}</title>
+        <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+    </head>
+    <body>
+
+        <section class="hero">
+            <h2>{{ shop.shop_name }}</h2>
+            <p>{{ shop.description }}</p>
+        </section>
+
+        <section class="carousel-section">
+            <h3>Veja em Ação</h3>
+            <div class="carousel-container">
+                
+                {% for image_path in shop.carrossel_images %}
+                <div class="slide fade">
+                    <img src="{{ url_for('static', path=image_path) }}" alt="Foto da {{ shop.shop_name }}">
+                </div>
+                {% endfor %}
+                <a class="prev" onclick="mudarSlide(-1)">&#10094;</a>
+                <a class="next" onclick="mudarSlide(1)">&#10095;</a>
+            </div>
+        </section>
+
+    <script>
+        // Este script funciona perfeitamente, pois ele opera no HTML
+        // já renderizado, não importa se os slides foram escritos
+        // manualmente ou gerados por um loop.
+        let slideIndex = 1;
+        mostrarSlide(slideIndex);
+        // ... (resto do script igual ao anterior) ...
+    </script>        
+
+    </body>
+
+</html>

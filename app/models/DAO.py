@@ -11,7 +11,7 @@ sql_update_loja_senha = 'update loja set nome = %s, email = %s, telefone = %s, e
 sql_login_email       = 'select * from loja where email = %s;'
 sql_loja_id           = 'select * from loja where id = %s;'
 sql_verifica_rec_senha= 'select email from loja where email = %s;'
-sql_load_studio       = 'select * from loja where url = %s;'
+sql_load_studio       = 'select * from loja where nome = %s;'
 sql_criar_galeria     = 'insert into galeria (id_loja, imagem) values(%s, %s);'
 sql_load_galeria      = 'select id, imagem from galeria where id_loja = %s;'
 sql_remover_galeria   = 'delete from galeria where id = %s;'
